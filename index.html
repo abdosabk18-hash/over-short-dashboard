@@ -34,18 +34,18 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;b
 .cc{background:var(--card);border-radius:8px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,0.1);}
 .ct2{font-size:13px;font-weight:600;margin-bottom:12px;color:var(--sub);}
 .bc{display:flex;flex-direction:column;gap:8px;}.br{display:flex;align-items:center;gap:8px;}
-.bl{width:120px;font-size:12px;text-align:right;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-.bk{flex:1;height:24px;background:var(--border);border-radius:4px;overflow:hidden;}
-.bf{height:100%;border-radius:4px;display:flex;align-items:center;padding:0 8px;font-size:11px;color:#fff;transition:width 0.3s;}
-.bv{width:100px;font-size:12px;flex-shrink:0;}
-.prc{height:28px;background:var(--border);border-radius:14px;overflow:hidden;margin:8px 0;}
-.prb{height:100%;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;font-weight:600;}
+.bl{width:130px;font-size:12px;text-align:right;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.bk{flex:1;height:26px;background:var(--border);border-radius:6px;overflow:hidden;}
+.bf{height:100%;border-radius:6px;display:flex;align-items:center;padding:0 8px;font-size:11px;color:#fff;transition:width 0.4s ease;}
+.bv{width:110px;font-size:12px;flex-shrink:0;font-weight:600;}
+.prc{height:32px;background:var(--border);border-radius:16px;overflow:hidden;margin:8px 0;}
+.prb{height:100%;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;font-weight:700;}
 table.tbl{width:100%;border-collapse:collapse;font-size:13px;}
 table.tbl th{background:var(--card);padding:10px;text-align:left;border-bottom:2px solid var(--border);font-weight:600;position:sticky;top:0;}
 table.tbl td{padding:8px 10px;border-bottom:1px solid var(--border);}
 table.tbl tr:hover{background:rgba(49,130,206,0.05);}
 .ttr{background:#ebf8ff!important;font-weight:700;}
-.badge{padding:2px 8px;border-radius:12px;font-size:11px;font-weight:500;}
+.badge{padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;}
 .badge.overage{background:#bee3f8;color:#2a4365;}.badge.shortage{background:#fed7d7;color:#9b2c2c;}
 .badge.closed{background:#c6f6d5;color:#22543d;}.badge.not-returned{background:#fed7d7;color:#9b2c2c;}.badge.in-review{background:#fefcbf;color:#744210;}
 .dtc{background:var(--card);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,0.1);overflow:hidden;}
@@ -53,21 +53,33 @@ table.tbl tr:hover{background:rgba(49,130,206,0.05);}
 .ttb input,.ttb select{padding:6px 10px;border:1px solid var(--border);border-radius:6px;font-size:12px;background:var(--card);color:var(--text);}
 .ttb input{flex:1;min-width:150px;}.rc{font-size:12px;color:var(--sub);margin-left:auto;}
 .dts{max-height:500px;overflow:auto;}
-.gs{font-size:16px;font-weight:700;padding:4px 12px;border-radius:8px;display:inline-block;}
+.gs{font-size:16px;font-weight:700;padding:6px 16px;border-radius:8px;display:inline-block;}
 .gs.fav{background:#c6f6d5;color:#22543d;}.gs.unfav{background:#fed7d7;color:#9b2c2c;}
-.hl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:20px;}
-.hl-card{background:var(--card);border-radius:10px;padding:18px;box-shadow:0 1px 3px rgba(0,0,0,0.1);}
+/* Highlight/Lowlight Cards */
+.hl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-bottom:20px;}
+.hl-card{background:var(--card);border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.08);}
 .hl-card.highlight{border-top:4px solid var(--green);}
 .hl-card.lowlight{border-top:4px solid var(--red);}
 .hl-card.corrective{border-top:4px solid var(--orange);}
 .hl-card.rootcause{border-top:4px solid var(--purple);}
-.hl-title{font-size:13px;font-weight:700;margin-bottom:10px;}
-.hl-item{font-size:12px;padding:6px 8px;border-radius:6px;margin-bottom:6px;line-height:1.5;}
+.hl-title{font-size:14px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:6px;}
+.hl-item{font-size:12px;padding:8px 10px;border-radius:8px;margin-bottom:8px;line-height:1.6;}
 .hl-item.good{background:#f0fff4;color:#22543d;border-left:3px solid var(--green);}
 .hl-item.bad{background:#fff5f5;color:#9b2c2c;border-left:3px solid var(--red);}
 .hl-item.action{background:#fffaf0;color:#7b341e;border-left:3px solid var(--orange);}
 .hl-item.info{background:#faf5ff;color:#44337a;border-left:3px solid var(--purple);}
-.spx-tag{display:inline-block;background:#bee3f8;color:#2a4365;padding:2px 8px;border-radius:10px;font-size:11px;margin:2px;}
+.hl-item.warn{background:#fffff0;color:#744210;border-left:3px solid #d69e2e;}
+.spx-tag{display:inline-block;background:#bee3f8;color:#2a4365;padding:3px 10px;border-radius:10px;font-size:11px;margin:3px;font-weight:600;}
+.dl-btn{display:inline-block;margin-top:10px;padding:7px 16px;background:var(--blue);color:#fff;border:none;border-radius:8px;font-size:12px;cursor:pointer;font-weight:600;}
+.dl-btn:hover{background:#2b6cb0;}
+.cause-badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:600;margin:1px;}
+.cause-rcv{background:#bee3f8;color:#2a4365;}
+.cause-stow{background:#c6f6d5;color:#22543d;}
+.cause-spx{background:#e9d8fd;color:#44337a;}
+.cause-cub{background:#fefcbf;color:#744210;}
+.cause-con{background:#fed7d7;color:#9b2c2c;}
+.cause-mov{background:#e2e8f0;color:#2d3748;}
+.cause-other{background:#f0fff4;color:#276749;}
 </style>
 </head>
 <body>
@@ -125,8 +137,8 @@ table.tbl tr:hover{background:rgba(49,130,206,0.05);}
   </div>
   <div class="st">&#128270; Root Cause Analysis</div>
   <div class="hl-grid">
-    <div class="hl-card rootcause"><div class="hl-title">&#128270; Why Overage & Shortage Happen</div><div id="rcqContent"></div></div>
-    <div class="hl-card rootcause"><div class="hl-title">&#128203; Tenure Analysis (New vs Old)</div><div id="tenureContent"></div></div>
+    <div class="hl-card rootcause"><div class="hl-title">&#128270; Root Cause Quiz</div><div id="rcqContent"></div></div>
+    <div class="hl-card rootcause"><div class="hl-title">&#128203; Tenure Analysis</div><div id="tenureContent"></div></div>
   </div>
 </div>
 <div class="content" id="tab-tracker">
@@ -152,11 +164,11 @@ table.tbl tr:hover{background:rgba(49,130,206,0.05);}
 <div class="content" id="tab-charts">
   <div class="st">Charts</div>
   <div class="tc">
-    <div class="cc"><div class="ct2">By Source</div><div id="cS"></div></div>
-    <div class="cc"><div class="ct2">Stow vs Receive</div><div id="cR"></div></div>
+    <div class="cc"><div class="ct2">By Root Cause</div><div id="cS"></div></div>
+    <div class="cc"><div class="ct2">Stow vs Receive vs SPX5</div><div id="cR"></div></div>
   </div>
   <div class="tc">
-    <div class="cc"><div class="ct2">Top Users</div><div id="cU"></div></div>
+    <div class="cc"><div class="ct2">Top Users by Qty</div><div id="cU"></div></div>
     <div class="cc"><div class="ct2">GL Group</div><div id="cG"></div></div>
   </div>
 </div>
@@ -185,9 +197,9 @@ table.tbl tr:hover{background:rgba(49,130,206,0.05);}
   <div class="st">SIPS Threshold Calculator</div>
   <div style="background:var(--card);border-radius:8px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,0.1);">
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:20px;">
-      <div><label style="display:block;font-size:12px;color:var(--sub);margin-bottom:4px;">Stow Opportunities</label><input type="number" id="sO" placeholder="e.g. 100485" oninput="calcThreshold()" style="width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;font-size:14px;"></div>
-      <div><label style="display:block;font-size:12px;color:var(--sub);margin-bottom:4px;">Total O&S Qty</label><input type="number" id="tO" placeholder="Auto" oninput="calcThreshold()" style="width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;font-size:14px;"></div>
-      <div><label style="display:block;font-size:12px;color:var(--sub);margin-bottom:4px;">Threshold</label><input type="number" id="tV" value="3400" oninput="calcThreshold()" style="width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;font-size:14px;"></div>
+      <div><label style="display:block;font-size:12px;color:var(--sub);margin-bottom:4px;">Stow Opportunities</label><input type="number" id="sO" placeholder="e.g. 100485" oninput="calcThreshold()" style="width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;font-size:14px;background:var(--card);color:var(--text);"></div>
+      <div><label style="display:block;font-size:12px;color:var(--sub);margin-bottom:4px;">Total O&S Qty</label><input type="number" id="tO" placeholder="Auto" oninput="calcThreshold()" style="width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;font-size:14px;background:var(--card);color:var(--text);"></div>
+      <div><label style="display:block;font-size:12px;color:var(--sub);margin-bottom:4px;">Threshold</label><input type="number" id="tV" value="3400" oninput="calcThreshold()" style="width:100%;padding:8px;border:1px solid var(--border);border-radius:6px;font-size:14px;background:var(--card);color:var(--text);"></div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:20px;background:#f7fafc;border-radius:8px;">
       <div style="text-align:center;padding:16px;background:var(--card);border-radius:8px;border:1px solid var(--border);"><div style="font-size:12px;color:var(--sub);">DPMO</div><div style="font-size:28px;font-weight:700;" id="dV">-</div></div>
@@ -213,7 +225,7 @@ table.tbl tr:hover{background:rgba(49,130,206,0.05);}
       <div id="i2" style="margin-top:8px;font-size:13px;color:#718096;">0 rows</div>
     </div>
   </div>
-  <button onclick="compareShifts()" style="display:block;margin:0 auto;padding:10px 24px;background:var(--blue);color:#fff;border:none;border-radius:8px;font-size:14px;cursor:pointer;">Compare</button>
+  <button onclick="compareShifts()" style="display:block;margin:0 auto;padding:10px 24px;background:var(--blue);color:#fff;border:none;border-radius:8px;font-size:14px;cursor:pointer;font-weight:600;">Compare</button>
   <div id="scR" style="margin-top:20px;"></div>
 </div>
 <script>
@@ -251,9 +263,18 @@ function detectCause(comment){
   if(cl.indexOf('spx5')>=0||cl.indexOf('spx')>=0)return 'SPX5';
   if(cl.indexOf('rcv')>=0||cl.indexOf('receive')>=0)return 'RECEIVE';
   if(cl.indexOf('stow')>=0)return 'STOW';
-  if(cl.indexOf('cubiscan')>=0)return 'CUBISCAN';
+  if(cl.indexOf('cub')>=0||cl.indexOf('cubiscan')>=0)return 'CUBISCAN';
+  if(cl.indexOf('con')>=0)return 'CONSOLIDATION';
+  if(cl.indexOf('mov')>=0)return 'MOVE';
   if(cl.indexOf('ps')>=0||cl.indexOf('prep')>=0)return 'PS';
-  return 'OTHER';
+  // اي كومنت تاني هياخده كـ OTHER مع الكومنت نفسه
+  return 'OTHER:'+comment.trim();
+}
+
+function getCauseLabel(cause){
+  if(!cause)return '-';
+  if(cause.indexOf('OTHER:')===0)return cause.replace('OTHER:','').trim();
+  return cause;
 }
 
 function handleDrop(e){e.preventDefault();e.target.closest('.ua').classList.remove('dg');processFiles(e.dataTransfer.files);}
@@ -296,21 +317,29 @@ function updateFileStatus(){
 
 function mergeAndProcess(){
   if(!SD)return;
+  // build QA map by asin+container+symptoms للـ matching الصح
   var qm={};
   if(RD){
     for(var i=0;i<RD.length;i++){
       var r=RD[i];
-      var k=(r.asin||'').trim()+'|'+(r.container||'').trim();
-      if(!qm[k])qm[k]=[];
-      qm[k].push(r);
+      // key بـ asin+container+symptoms
+      var k1=(r.asin||'').trim()+'|'+(r.container||'').trim()+'|'+(r.symptoms||'').trim();
+      // key بـ asin+container بس كـ fallback
+      var k2=(r.asin||'').trim()+'|'+(r.container||'').trim();
+      if(!qm[k1])qm[k1]=[];
+      qm[k1].push(r);
+      if(!qm[k2])qm[k2]=[];
+      qm[k2].push(r);
     }
   }
   MD=[];
   var now=new Date();
   for(var i=0;i<SD.length;i++){
     var row=SD[i];
-    var k=(row.asin||'').trim()+'|'+(row.container||'').trim();
-    var qaRows=qm[k]||null;
+    // try exact match first (asin+container+symptoms)
+    var k1=(row.asin||'').trim()+'|'+(row.container||'').trim()+'|'+(row.symptoms||'').trim();
+    var k2=(row.asin||'').trim()+'|'+(row.container||'').trim();
+    var qaRows=qm[k1]||qm[k2]||null;
     var m=qaRows?qaRows[0]:null;
     var o={};
     for(var p in row)o[p]=row[p];
@@ -320,12 +349,15 @@ function mergeAndProcess(){
       if(cm){
         o.review_status='Closed';
         o.cause=detectCause(cm);
-        if(o.cause==='SPX5'){
+        var baseC=o.cause.indexOf('OTHER:')===0?'OTHER':o.cause;
+        if(baseC==='SPX5'){
           o.responsible='';
-        }else if(o.cause==='STOW'){
+        }else if(baseC==='STOW'){
           o.responsible=(row.user_id||'').trim();
         }else{
-          o.responsible=(m.user||m['user_id.1']||'').trim();
+          // RECEIVE, CON, MOV, CUB, PS, OTHER - user from QA
+          var qaUser=(m.user||m['user_id.1']||'').trim();
+          o.responsible=qaUser||(row.user_id||'').trim();
         }
       }else{
         o.review_status='In Review';
@@ -403,14 +435,22 @@ function clearAll(){
 function kpiCard(l,v,s,c){
   return '<div class="kc '+c+'"><div class="lb">'+l+'</div><div class="vl">'+v+'</div>'+(s?'<div class="su2">'+s+'</div>':'')+' </div>';
 }
+
 function createBar(label,value,max,color,sv){
   var pct=max>0?(value/max*100):0;
-  return '<div class="br"><div class="bl">'+label+'</div><div class="bk"><div class="bf" style="width:'+Math.max(pct,2)+'%;background:'+color+'">'+(pct>15?value:'')+'</div></div><div class="bv">'+(sv!==undefined?sv:value)+'</div></div>';
+  return '<div class="br"><div class="bl" title="'+label+'">'+label+'</div><div class="bk"><div class="bf" style="width:'+Math.max(pct,2)+'%;background:'+color+'">'+(pct>12?value:'')+'</div></div><div class="bv">'+(sv!==undefined?sv:value)+'</div></div>';
 }
+
 function progressBar(rev,total){
   var pct=total>0?(rev/total*100):0;
   var color=pct>=80?'linear-gradient(90deg,#38a169,#48bb78)':pct>=50?'linear-gradient(90deg,#dd6b20,#ed8936)':'linear-gradient(90deg,#e53e3e,#fc8181)';
-  return '<div class="prc"><div class="prb" style="width:'+pct.toFixed(1)+'%;background:'+color+'">'+pct.toFixed(2)+'%</div></div><div style="display:flex;justify-content:space-between;font-size:12px;color:#718096;margin-top:4px;"><span>Reviewed: '+rev+'</span><span>Pending: '+(total-rev)+'</span><span>Total: '+total+'</span></div>';
+  return '<div class="prc"><div class="prb" style="width:'+Math.max(pct,3).toFixed(1)+'%;background:'+color+'">'+pct.toFixed(1)+'%</div></div><div style="display:flex;justify-content:space-between;font-size:12px;color:#718096;margin-top:6px;"><span>&#9989; Reviewed: '+rev+'</span><span>&#9203; Pending: '+(total-rev)+'</span><span>Total: '+total+'</span></div>';
+}
+
+function getBaseCause(cause){
+  if(!cause)return '';
+  if(cause.indexOf('OTHER:')===0)return 'OTHER';
+  return cause;
 }
 
 function renderOverview(){
@@ -422,35 +462,40 @@ function renderOverview(){
   var notRet=MD.filter(function(r){return r.review_status==='Not Returned';});
   var inRev=MD.filter(function(r){return r.review_status==='In Review';});
   var closedQty=closed.reduce(function(s,r){return s+r.qty;},0);
+  var notRetQty=notRet.reduce(function(s,r){return s+r.qty;},0);
+  var inRevQty=inRev.reduce(function(s,r){return s+r.qty;},0);
   var h='';
   h+=kpiCard('Total O&S Qty',totalQty,'Records: '+MD.length,'blue');
-  h+=kpiCard('Overage',overQty,(totalQty>0?(overQty/totalQty*100).toFixed(2):0)+'%','teal');
-  h+=kpiCard('Shortage',shortQty,(totalQty>0?(shortQty/totalQty*100).toFixed(2):0)+'%','red');
-  h+=kpiCard('Closed',closedQty,(totalQty>0?(closedQty/totalQty*100).toFixed(2):0)+'% qty reviewed','green');
-  h+=kpiCard('Not Returned',notRet.reduce(function(s,r){return s+r.qty;},0),(MD.length>0?(notRet.length/MD.length*100).toFixed(2):0)+'% records','orange');
-  h+=kpiCard('In Review',inRev.reduce(function(s,r){return s+r.qty;},0),'','purple');
+  h+=kpiCard('Overage Qty',overQty,(totalQty>0?(overQty/totalQty*100).toFixed(1):0)+'%','teal');
+  h+=kpiCard('Shortage Qty',shortQty,(totalQty>0?(shortQty/totalQty*100).toFixed(1):0)+'%','red');
+  h+=kpiCard('Closed Qty',closedQty,(totalQty>0?(closedQty/totalQty*100).toFixed(1):0)+'% reviewed','green');
+  h+=kpiCard('Not Returned',notRetQty,(MD.length>0?(notRet.length/MD.length*100).toFixed(1):0)+'% records','orange');
+  h+=kpiCard('In Review',inRevQty,'','purple');
   document.getElementById('oK').innerHTML=h;
   var maxVal=Math.max(overQty,shortQty);
   var ch='<div class="bc">';
-  ch+=createBar('Overage',overQty,maxVal,'linear-gradient(90deg,#3182ce,#63b3ed)',overQty+' ('+(totalQty>0?(overQty/totalQty*100).toFixed(2):0)+'%)');
-  ch+=createBar('Shortage',shortQty,maxVal,'linear-gradient(90deg,#e53e3e,#fc8181)',shortQty+' ('+(totalQty>0?(shortQty/totalQty*100).toFixed(2):0)+'%)');
+  ch+=createBar('Overage',overQty,maxVal,'linear-gradient(90deg,#3182ce,#63b3ed)',overQty+' ('+(totalQty>0?(overQty/totalQty*100).toFixed(1):0)+'%)');
+  ch+=createBar('Shortage',shortQty,maxVal,'linear-gradient(90deg,#e53e3e,#fc8181)',shortQty+' ('+(totalQty>0?(shortQty/totalQty*100).toFixed(1):0)+'%)');
   ch+='</div>';
   document.getElementById('oC').innerHTML=ch;
   document.getElementById('oP').innerHTML=progressBar(closed.length,MD.length);
   var causes={};
   MD.forEach(function(r){
     if(r.cause){
-      if(!causes[r.cause])causes[r.cause]={count:0,qty:0};
-      causes[r.cause].count++;
-      causes[r.cause].qty+=r.qty;
+      var bc=getBaseCause(r.cause);
+      if(!causes[bc])causes[bc]={count:0,qty:0};
+      causes[bc].count++;
+      causes[bc].qty+=r.qty;
     }
   });
   var causeKeys=Object.keys(causes).sort(function(a,b){return causes[b].qty-causes[a].qty;});
   var maxC=causeKeys.length>0?causes[causeKeys[0]].qty:0;
+  var colors={'RECEIVE':'linear-gradient(90deg,#3182ce,#63b3ed)','STOW':'linear-gradient(90deg,#38a169,#68d391)','SPX5':'linear-gradient(90deg,#805ad5,#b794f4)','CUBISCAN':'linear-gradient(90deg,#d69e2e,#f6e05e)','CONSOLIDATION':'linear-gradient(90deg,#e53e3e,#fc8181)','MOVE':'linear-gradient(90deg,#718096,#a0aec0)','PS':'linear-gradient(90deg,#dd6b20,#ed8936)','OTHER':'linear-gradient(90deg,#319795,#4fd1c5)'};
   var rcH='<div class="bc">';
   causeKeys.forEach(function(k){
     var v=causes[k];
-    rcH+=createBar(k,v.qty,maxC,'linear-gradient(90deg,#805ad5,#b794f4)',v.qty+' ('+(totalQty>0?(v.qty/totalQty*100).toFixed(2):0)+'%)');
+    var col=colors[k]||'linear-gradient(90deg,#319795,#4fd1c5)';
+    rcH+=createBar(k,v.qty,maxC,col,v.qty+' ('+(totalQty>0?(v.qty/totalQty*100).toFixed(1):0)+'%)');
   });
   rcH+='</div>';
   document.getElementById('oR').innerHTML=rcH;
@@ -461,66 +506,93 @@ function renderHighlightsLowlights(totalQty,overQty,shortQty,closed,notRet,inRev
   var closedPct=MD.length>0?(closed.length/MD.length*100):0;
   var notRetPct=MD.length>0?(notRet.length/MD.length*100):0;
   var closedQtyPct=totalQty>0?(closed.reduce(function(s,r){return s+r.qty;},0)/totalQty*100):0;
+  var stowUsers={};
+  MD.forEach(function(r){
+    if(getBaseCause(r.cause)==='STOW'&&r.responsible){
+      if(!stowUsers[r.responsible])stowUsers[r.responsible]=0;
+      stowUsers[r.responsible]+=r.qty;
+    }
+  });
+  var rcvUsers={};
+  MD.forEach(function(r){
+    if(getBaseCause(r.cause)==='RECEIVE'&&r.responsible){
+      if(!rcvUsers[r.responsible])rcvUsers[r.responsible]=0;
+      rcvUsers[r.responsible]+=r.qty;
+    }
+  });
+  var spxQty=MD.filter(function(r){return getBaseCause(r.cause)==='SPX5';}).reduce(function(s,r){return s+r.qty;},0);
+  var spxPct=totalQty>0?(spxQty/totalQty*100):0;
+  var rcvQty=causes['RECEIVE']?causes['RECEIVE'].qty:0;
+  var stowQty=causes['STOW']?causes['STOW'].qty:0;
 
-  // --- HIGHLIGHTS ---
+  // HIGHLIGHTS
   var hl='';
   if(closedPct>=70)hl+='<div class="hl-item good">&#9989; '+closedPct.toFixed(1)+'% of cases reviewed & closed</div>';
-  if(notRetPct<20)hl+='<div class="hl-item good">&#9989; Low pending rate: only '+notRetPct.toFixed(1)+'% not returned</div>';
-  var spxQty=MD.filter(function(r){return r.cause==='SPX5';}).reduce(function(s,r){return s+r.qty;},0);
-  var spxPct=totalQty>0?(spxQty/totalQty*100):0;
-  if(spxPct<20)hl+='<div class="hl-item good">&#9989; SPX5 impact low: '+spxPct.toFixed(1)+'% of total</div>';
-  var stowUsers={};
-  MD.forEach(function(r){if(r.cause==='STOW'&&r.responsible){if(!stowUsers[r.responsible])stowUsers[r.responsible]=0;stowUsers[r.responsible]+=r.qty;}});
-  if(Object.keys(stowUsers).length===0)hl+='<div class="hl-item good">&#9989; No STOW defects identified</div>';
-  if(!hl)hl='<div class="hl-item good">&#9989; Data loaded successfully</div>';
+  if(closedQtyPct>=70)hl+='<div class="hl-item good">&#9989; '+closedQtyPct.toFixed(1)+'% of total qty reviewed</div>';
+  if(notRetPct<20)hl+='<div class="hl-item good">&#9989; Low pending rate: '+notRetPct.toFixed(1)+'% not returned</div>';
+  if(spxPct<15)hl+='<div class="hl-item good">&#9989; SPX5 impact low: '+spxPct.toFixed(1)+'% of total</div>';
+  if(Object.keys(stowUsers).length===0)hl+='<div class="hl-item good">&#9989; No STOW defects this shift</div>';
+  if(rcvQty<5)hl+='<div class="hl-item good">&#9989; Very low RECEIVE defects: '+rcvQty+' qty</div>';
+  var topStow=Object.keys(stowUsers).sort(function(a,b){return stowUsers[b]-stowUsers[a];})[0];
+  var topRcv=Object.keys(rcvUsers).sort(function(a,b){return rcvUsers[b]-rcvUsers[a];})[0];
+  if(!hl)hl='<div class="hl-item good">&#9989; Data processed successfully - '+MD.length+' records</div>';
   document.getElementById('hlContent').innerHTML=hl;
 
-  // --- LOWLIGHTS ---
+  // LOWLIGHTS
   var ll='';
-  if(notRetPct>=20)ll+='<div class="hl-item bad">&#10060; '+notRetPct.toFixed(1)+'% cases still not returned ('+notRet.length+' records)</div>';
+  if(notRetPct>=20)ll+='<div class="hl-item bad">&#10060; '+notRetPct.toFixed(1)+'% cases not returned ('+notRet.length+' records / '+notRet.reduce(function(s,r){return s+r.qty;},0)+' qty)</div>';
   if(closedPct<50)ll+='<div class="hl-item bad">&#10060; Low review rate: only '+closedPct.toFixed(1)+'% closed</div>';
-  if(spxPct>=20)ll+='<div class="hl-item bad">&#10060; High SPX5 impact: '+spxPct.toFixed(1)+'% of total qty</div>';
-  var topStowUser=Object.keys(stowUsers).sort(function(a,b){return stowUsers[b]-stowUsers[a];})[0];
-  if(topStowUser)ll+='<div class="hl-item bad">&#10060; Top STOW offender: '+topStowUser+' ('+stowUsers[topStowUser]+' qty)</div>';
-  var rcvUsers={};
-  MD.forEach(function(r){if(r.cause==='RECEIVE'&&r.responsible){if(!rcvUsers[r.responsible])rcvUsers[r.responsible]=0;rcvUsers[r.responsible]+=r.qty;}});
-  var topRcvUser=Object.keys(rcvUsers).sort(function(a,b){return rcvUsers[b]-rcvUsers[a];})[0];
-  if(topRcvUser)ll+='<div class="hl-item bad">&#10060; Top RECEIVE offender: '+topRcvUser+' ('+rcvUsers[topRcvUser]+' qty)</div>';
-  if(!ll)ll='<div class="hl-item bad">&#128308; No major issues detected</div>';
+  if(spxPct>=15)ll+='<div class="hl-item bad">&#10060; High SPX5 impact: '+spxPct.toFixed(1)+'% ('+spxQty+' qty) - escalation needed</div>';
+  if(topStow)ll+='<div class="hl-item bad">&#10060; Top STOW offender: <strong>'+topStow+'</strong> ('+stowUsers[topStow]+' qty) - GCA required</div>';
+  if(topRcv)ll+='<div class="hl-item bad">&#10060; Top RECEIVE offender: <strong>'+topRcv+'</strong> ('+rcvUsers[topRcv]+' qty) - Coaching required</div>';
+  if(rcvQty>stowQty&&rcvQty>0)ll+='<div class="hl-item bad">&#10060; RECEIVE defects higher than STOW ('+rcvQty+' vs '+stowQty+') - focus on receive process</div>';
+  if(stowQty>rcvQty&&stowQty>0)ll+='<div class="hl-item bad">&#10060; STOW defects higher than RECEIVE ('+stowQty+' vs '+rcvQty+') - focus on stow process</div>';
+  var conQty=causes['CONSOLIDATION']?causes['CONSOLIDATION'].qty:0;
+  var movQty=causes['MOVE']?causes['MOVE'].qty:0;
+  if(conQty>0)ll+='<div class="hl-item warn">&#9888; CONSOLIDATION issues: '+conQty+' qty - check consolidation process</div>';
+  if(movQty>0)ll+='<div class="hl-item warn">&#9888; MOVE issues: '+movQty+' qty - check move process</div>';
+  if(!ll)ll='<div class="hl-item bad">&#128308; No major issues detected this shift</div>';
   document.getElementById('llContent').innerHTML=ll;
 
-  // --- CORRECTIVE ACTIONS - STOW ---
+  // CORRECTIVE ACTIONS - STOW
   var stowKeys=Object.keys(stowUsers).sort(function(a,b){return stowUsers[b]-stowUsers[a];});
   var caS='';
   if(stowKeys.length>0){
     stowKeys.forEach(function(u){
-      caS+='<div class="hl-item action">&#128101; <strong>'+u+'</strong> - Qty: '+stowUsers[u]+'<br>';
-      caS+='&nbsp;&nbsp;&#9658; Issue GCA + Schedule Coaching<br>';
-      caS+='&nbsp;&nbsp;&#9658; Review stow process compliance</div>';
+      var qty=stowUsers[u];
+      var severity=qty>=5?'&#128308; HIGH':qty>=3?'&#128992; MEDIUM':'&#128994; LOW';
+      caS+='<div class="hl-item action">'+severity+' | <strong>'+u+'</strong> - '+qty+' qty<br>';
+      caS+='&nbsp;&nbsp;&#9658; Issue GCA immediately<br>';
+      caS+='&nbsp;&nbsp;&#9658; Schedule 1:1 Coaching session<br>';
+      caS+='&nbsp;&nbsp;&#9658; Review stow screen check process<br>';
+      caS+='&nbsp;&nbsp;&#9658; Verify process compliance on floor</div>';
     });
   }else{
-    caS='<div class="hl-item action">&#9989; No STOW corrective actions needed</div>';
+    caS='<div class="hl-item good">&#9989; No STOW corrective actions needed</div>';
   }
   document.getElementById('caStow').innerHTML=caS;
 
-  // --- CORRECTIVE ACTIONS - RECEIVE ---
+  // CORRECTIVE ACTIONS - RECEIVE
   var rcvKeys=Object.keys(rcvUsers).sort(function(a,b){return rcvUsers[b]-rcvUsers[a];});
   var caR='';
   if(rcvKeys.length>0){
     rcvKeys.forEach(function(u){
-      caR+='<div class="hl-item action">&#128101; <strong>'+u+'</strong> - Qty: '+rcvUsers[u]+'<br>';
+      var qty=rcvUsers[u];
+      var severity=qty>=5?'&#128308; HIGH':qty>=3?'&#128992; MEDIUM':'&#128994; LOW';
+      caR+='<div class="hl-item action">'+severity+' | <strong>'+u+'</strong> - '+qty+' qty<br>';
       caR+='&nbsp;&nbsp;&#9658; Schedule Coaching session<br>';
-      caR+='&nbsp;&nbsp;&#9658; Review receive process & screen check</div>';
+      caR+='&nbsp;&nbsp;&#9658; Review receive screen check process<br>';
+      caR+='&nbsp;&nbsp;&#9658; Verify item count before confirming receive</div>';
     });
   }else{
-    caR='<div class="hl-item action">&#9989; No RECEIVE corrective actions needed</div>';
+    caR='<div class="hl-item good">&#9989; No RECEIVE corrective actions needed</div>';
   }
   document.getElementById('caRcv').innerHTML=caR;
 
-  // --- CORRECTIVE ACTIONS - SPX5 CONTAINERS ---
+  // SPX5 CONTAINERS + DOWNLOAD
   var spxContainers={};
   MD.forEach(function(r){
-    if(r.cause==='SPX5'){
+    if(getBaseCause(r.cause)==='SPX5'){
       var c=r.container||'Unknown';
       if(!spxContainers[c])spxContainers[c]=0;
       spxContainers[c]+=r.qty;
@@ -529,53 +601,78 @@ function renderHighlightsLowlights(totalQty,overQty,shortQty,closed,notRet,inRev
   var spxKeys=Object.keys(spxContainers).sort(function(a,b){return spxContainers[b]-spxContainers[a];});
   var caSpx='';
   if(spxKeys.length>0){
-    caSpx+='<div class="hl-item info" style="margin-bottom:8px;">&#128230; Send escalation to SPX5 for the following containers:</div>';
+    caSpx+='<div class="hl-item info">&#128230; '+spxKeys.length+' container(s) need SPX5 escalation - total qty: '+spxQty+'</div>';
+    caSpx+='<div style="margin:8px 0;">';
     spxKeys.forEach(function(c){
       caSpx+='<span class="spx-tag">'+c+' ('+spxContainers[c]+')</span>';
     });
+    caSpx+='</div>';
+    caSpx+='<button class="dl-btn" onclick="downloadSPX5Containers()">&#11015; Download SPX5 Containers CSV</button>';
   }else{
     caSpx='<div class="hl-item info">&#9989; No SPX5 containers to escalate</div>';
   }
   document.getElementById('caSpx').innerHTML=caSpx;
 
-  // --- ROOT CAUSE QUIZ ---
-  var totalClosed=closed.length;
+  // ROOT CAUSE QUIZ
   var rcq='';
-  var causeReasons={
-    'STOW':'Associate not checking screen / not following stow process',
-    'RECEIVE':'Associate not following receive process / screen not checked',
-    'SPX5':'Item came wrong from SPX5 site - escalation required',
-    'CUBISCAN':'Cubiscan data mismatch - item dimensions issue',
-    'PS':'Prep & Ship issue - wrong item prepped',
-    'OTHER':'Unknown cause - needs further investigation'
+  var causeDetails={
+    'RECEIVE':{why:'Associate not checking screen during receive / wrong item confirmed',fix:'Coaching on receive process + screen verification',icon:'&#128230;'},
+    'STOW':{why:'Associate not following stow process / not checking screen before stow',fix:'GCA + Coaching on stow process compliance',icon:'&#128218;'},
+    'SPX5':{why:'Item came incorrect from SPX5 site - not a local associate error',fix:'Escalate to SPX5 management with container list',icon:'&#128230;'},
+    'CUBISCAN':{why:'Item dimensions mismatch in system vs physical item',fix:'Report to Cubiscan team for data correction',icon:'&#128190;'},
+    'CONSOLIDATION':{why:'Wrong item placed in consolidation / consolidation error',fix:'Review consolidation process & retrain associates',icon:'&#128218;'},
+    'MOVE':{why:'Item moved to wrong location / move process not followed',fix:'Review move process compliance',icon:'&#128218;'},
+    'PS':{why:'Prep & Ship error - wrong item prepped or labeled',fix:'Review PS process & check prep accuracy',icon:'&#128218;'},
+    'OTHER':{why:'Cause needs further investigation',fix:'Review with team lead & document findings',icon:'&#128269;'}
   };
   var causeKeys2=Object.keys(causes).sort(function(a,b){return causes[b].qty-causes[a].qty;});
   if(causeKeys2.length>0){
     causeKeys2.forEach(function(k){
-      var reason=causeReasons[k]||'Needs investigation';
-      rcq+='<div class="hl-item info"><strong>'+k+'</strong> ('+causes[k].qty+' qty)<br>&nbsp;&nbsp;&#9658; '+reason+'</div>';
+      var det=causeDetails[k]||{why:'Needs investigation',fix:'Review with team lead',icon:'&#128269;'};
+      var pct=totalQty>0?(causes[k].qty/totalQty*100).toFixed(1):0;
+      rcq+='<div class="hl-item info">'+det.icon+' <strong>'+k+'</strong> - '+causes[k].qty+' qty ('+pct+'%)<br>';
+      rcq+='&nbsp;&nbsp;&#128161; Why: '+det.why+'<br>';
+      rcq+='&nbsp;&nbsp;&#9989; Fix: '+det.fix+'</div>';
     });
   }else{
     rcq='<div class="hl-item info">No closed cases with root cause yet</div>';
   }
   document.getElementById('rcqContent').innerHTML=rcq;
 
-  // --- TENURE ANALYSIS ---
-  var newAss=MD.filter(function(r){return r.tenure<=90;});
-  var oldAss=MD.filter(function(r){return r.tenure>90;});
+  // TENURE ANALYSIS
+  var newAss=MD.filter(function(r){return r.tenure>0&&r.tenure<=90;});
+  var midAss=MD.filter(function(r){return r.tenure>90&&r.tenure<=180;});
+  var oldAss=MD.filter(function(r){return r.tenure>180;});
+  var noTenure=MD.filter(function(r){return !r.tenure||r.tenure===0;});
   var newQty=newAss.reduce(function(s,r){return s+r.qty;},0);
+  var midQty=midAss.reduce(function(s,r){return s+r.qty;},0);
   var oldQty=oldAss.reduce(function(s,r){return s+r.qty;},0);
   var ten='';
-  ten+='<div class="hl-item info">&#128197; <strong>New Associates (0-90 days):</strong> '+newAss.length+' records | Qty: '+newQty+'</div>';
-  ten+='<div class="hl-item info">&#128197; <strong>Experienced (90+ days):</strong> '+oldAss.length+' records | Qty: '+oldQty+'</div>';
-  if(newQty>oldQty){
-    ten+='<div class="hl-item bad">&#9888; New associates contributing more defects - increase coaching frequency</div>';
-  }else if(oldQty>newQty){
-    ten+='<div class="hl-item bad">&#9888; Experienced associates contributing more defects - check process adherence</div>';
-  }else{
-    ten+='<div class="hl-item good">&#9989; Balanced defect distribution across tenure groups</div>';
+  ten+='<div class="hl-item info">&#128197; <strong>New (0-90 days):</strong> '+newAss.length+' records | Qty: '+newQty+'</div>';
+  ten+='<div class="hl-item info">&#128197; <strong>Mid (91-180 days):</strong> '+midAss.length+' records | Qty: '+midQty+'</div>';
+  ten+='<div class="hl-item info">&#128197; <strong>Experienced (180+ days):</strong> '+oldAss.length+' records | Qty: '+oldQty+'</div>';
+  var maxT=Math.max(newQty,midQty,oldQty);
+  if(maxT>0){
+    if(newQty===maxT)ten+='<div class="hl-item bad">&#9888; New associates contributing most defects ('+newQty+' qty) - increase onboarding coaching</div>';
+    else if(midQty===maxT)ten+='<div class="hl-item warn">&#9888; Mid-tenure associates contributing most defects ('+midQty+' qty) - refresher training needed</div>';
+    else ten+='<div class="hl-item bad">&#9888; Experienced associates contributing most defects ('+oldQty+' qty) - check process adherence & complacency</div>';
   }
   document.getElementById('tenureContent').innerHTML=ten;
+}
+
+function downloadSPX5Containers(){
+  if(!MD)return;
+  var spxItems=MD.filter(function(r){return getBaseCause(r.cause)==='SPX5';});
+  if(!spxItems.length)return alert('No SPX5 items found');
+  var csv='Container,ASIN,Symptom,Qty,User,Timestamp\n';
+    spxItems.forEach(function(r){
+    csv+='"'+(r.container||'')+'","'+(r.asin||'')+'","'+(r.symptoms||'')+'","'+r.qty+'","'+(r.user_id||'')+'","'+(r.timestamp||'')+'"\n';
+  });
+  var blob=new Blob([csv],{type:'text/csv'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='spx5_containers.csv';
+  a.click();
 }
 
 function renderTracker(){
@@ -590,7 +687,7 @@ function renderTracker(){
   k+=kpiCard('Total',MD.length,'Qty: '+(cQty+nQty+iQty),'blue');
   k+=kpiCard('Closed',closed.length,'Qty: '+cQty,'green');
   k+=kpiCard('In Review',inRev.length,'Qty: '+iQty,'purple');
-  k+=kpiCard('Not Returned',notRet.length,'Qty: '+nQty+' | '+(MD.length>0?(notRet.length/MD.length*100).toFixed(2):0)+'%','red');
+  k+=kpiCard('Not Returned',notRet.length,'Qty: '+nQty+' | '+(MD.length>0?(notRet.length/MD.length*100).toFixed(1):0)+'%','red');
   document.getElementById('tK').innerHTML=k;
   document.getElementById('tP').innerHTML=progressBar(closed.length,MD.length);
   renderPendingTable(notRet);
@@ -624,13 +721,14 @@ function renderBridge(){
   var shortQty=MD.filter(function(r){return r.symptoms==='Shortage';}).reduce(function(s,r){return s+r.qty;},0);
   var sm='';
   sm+=kpiCard('Total O&S Qty',totalQty,'Over: '+overQty+' | Short: '+shortQty,'blue');
-  sm+=kpiCard('Overage',overQty,(totalQty>0?(overQty/totalQty*100).toFixed(2):0)+'%','teal');
-  sm+=kpiCard('Shortage',shortQty,(totalQty>0?(shortQty/totalQty*100).toFixed(2):0)+'%','red');
+  sm+=kpiCard('Overage',overQty,(totalQty>0?(overQty/totalQty*100).toFixed(1):0)+'%','teal');
+  sm+=kpiCard('Shortage',shortQty,(totalQty>0?(shortQty/totalQty*100).toFixed(1):0)+'%','red');
   document.getElementById('bK').innerHTML=sm;
   var sources={};
   MD.forEach(function(r){
     if(r.review_status!=='Closed')return;
-    var src=r.cause||'OTHER';
+    var bc=getBaseCause(r.cause);
+    var src=bc||'OTHER';
     if(src==='RECEIVE')src='RCV';
     else if(src==='STOW'){src=r.symptoms==='Overage'?'Over Stow':'Short Stow';}
     if(!sources[src])sources[src]={over:0,short:0,total:0};
@@ -646,29 +744,28 @@ function renderBridge(){
     sources['Pending Review']={over:nO,short:nS,total:nQ};
   }
   var tb='';
-  var srcOrder=['RCV','Over Stow','Short Stow','SPX5','PS','CUBISCAN'];
+  var srcOrder=['RCV','Over Stow','Short Stow','SPX5','CONSOLIDATION','MOVE','CUBISCAN','PS'];
   var allSrc=srcOrder.filter(function(s){return sources[s];});
   var otherK=Object.keys(sources).filter(function(s){return srcOrder.indexOf(s)<0&&s!=='Pending Review';});
   allSrc=allSrc.concat(otherK);
   allSrc.forEach(function(src){
     var d=sources[src];
-    var pct=totalQty>0?(d.total/totalQty*100).toFixed(2):'0.00';
+    var pct=totalQty>0?(d.total/totalQty*100).toFixed(1):'0.0';
     tb+='<tr><td><strong>'+src+'</strong></td><td>'+(d.over||'-')+'</td><td>'+(d.short||'-')+'</td><td><strong>'+d.total+'</strong></td><td>'+pct+'%</td></tr>';
   });
   if(sources['Pending Review']){
     var d=sources['Pending Review'];
-    var pct=totalQty>0?(d.total/totalQty*100).toFixed(2):'0.00';
+    var pct=totalQty>0?(d.total/totalQty*100).toFixed(1):'0.0';
     tb+='<tr style="background:#fefcbf;"><td><strong>Pending Review</strong></td><td>'+(d.over||'-')+'</td><td>'+(d.short||'-')+'</td><td><strong>'+d.total+'</strong></td><td>'+pct+'%</td></tr>';
   }
   tb+='<tr class="ttr"><td><strong>Total</strong></td><td><strong>'+overQty+'</strong></td><td><strong>'+shortQty+'</strong></td><td><strong>'+totalQty+'</strong></td><td><strong>100%</strong></td></tr>';
   document.getElementById('bT').querySelector('tbody').innerHTML=tb;
   var rcvU={};
   MD.forEach(function(r){
-    if(r.cause==='RECEIVE'&&r.responsible){
-      var uid=r.responsible;
-      if(!rcvU[uid])rcvU[uid]={defects:0,qty:0};
-      rcvU[uid].defects++;
-      rcvU[uid].qty+=r.qty;
+    if(getBaseCause(r.cause)==='RECEIVE'&&r.responsible){
+      if(!rcvU[r.responsible])rcvU[r.responsible]={defects:0,qty:0};
+      rcvU[r.responsible].defects++;
+      rcvU[r.responsible].qty+=r.qty;
     }
   });
   var rcvKeys=Object.keys(rcvU).sort(function(a,b){return rcvU[b].qty-rcvU[a].qty;});
@@ -683,32 +780,34 @@ function renderBridge(){
 function renderCharts(){
   if(!MD)return;
   var totalQty=MD.reduce(function(s,r){return s+r.qty;},0);
-  var sources={};
+  var causes={};
   MD.forEach(function(r){
-    var src=r.cause||r.review_status;
-    if(!sources[src])sources[src]={over:0,short:0};
-    if(r.symptoms==='Overage')sources[src].over+=r.qty;
-    else sources[src].short+=r.qty;
+    var bc=getBaseCause(r.cause)||'Not Reviewed';
+    if(!causes[bc])causes[bc]={over:0,short:0};
+    if(r.symptoms==='Overage')causes[bc].over+=r.qty;
+    else causes[bc].short+=r.qty;
   });
-  var maxSrc=0;
-  Object.values(sources).forEach(function(v){maxSrc=Math.max(maxSrc,v.over+v.short);});
+  var maxC=0;
+  Object.values(causes).forEach(function(v){maxC=Math.max(maxC,v.over+v.short);});
+  var colors={'RECEIVE':'linear-gradient(90deg,#3182ce,#63b3ed)','STOW':'linear-gradient(90deg,#38a169,#68d391)','SPX5':'linear-gradient(90deg,#805ad5,#b794f4)','CUBISCAN':'linear-gradient(90deg,#d69e2e,#f6e05e)','CONSOLIDATION':'linear-gradient(90deg,#e53e3e,#fc8181)','MOVE':'linear-gradient(90deg,#718096,#a0aec0)','PS':'linear-gradient(90deg,#dd6b20,#ed8936)'};
   var sH='<div class="bc">';
-  Object.keys(sources).forEach(function(src){
-    var d=sources[src];
-    sH+=createBar(src,d.over+d.short,maxSrc,'linear-gradient(90deg,#3182ce,#63b3ed)','O:'+d.over+' S:'+d.short);
+  Object.keys(causes).sort(function(a,b){return (causes[b].over+causes[b].short)-(causes[a].over+causes[a].short);}).forEach(function(src){
+    var d=causes[src];
+    var col=colors[src]||'linear-gradient(90deg,#319795,#4fd1c5)';
+    sH+=createBar(src,d.over+d.short,maxC,col,'O:'+d.over+' S:'+d.short);
   });
   sH+='</div>';
   document.getElementById('cS').innerHTML=sH;
-  var stowQ=MD.filter(function(r){return r.cause==='STOW';}).reduce(function(s,r){return s+r.qty;},0);
-  var rcvQ=MD.filter(function(r){return r.cause==='RECEIVE';}).reduce(function(s,r){return s+r.qty;},0);
-  var spxQ=MD.filter(function(r){return r.cause==='SPX5';}).reduce(function(s,r){return s+r.qty;},0);
+  var stowQ=MD.filter(function(r){return getBaseCause(r.cause)==='STOW';}).reduce(function(s,r){return s+r.qty;},0);
+  var rcvQ=MD.filter(function(r){return getBaseCause(r.cause)==='RECEIVE';}).reduce(function(s,r){return s+r.qty;},0);
+  var spxQ=MD.filter(function(r){return getBaseCause(r.cause)==='SPX5';}).reduce(function(s,r){return s+r.qty;},0);
   var othQ=totalQty-stowQ-rcvQ-spxQ;
   var maxSR=Math.max(stowQ,rcvQ,spxQ,othQ);
   var srH='<div class="bc">';
-  srH+=createBar('STOW',stowQ,maxSR,'linear-gradient(90deg,#3182ce,#63b3ed)',stowQ+' ('+(totalQty>0?(stowQ/totalQty*100).toFixed(2):0)+'%)');
-  srH+=createBar('RECEIVE',rcvQ,maxSR,'linear-gradient(90deg,#dd6b20,#ed8936)',rcvQ+' ('+(totalQty>0?(rcvQ/totalQty*100).toFixed(2):0)+'%)');
-  srH+=createBar('SPX5',spxQ,maxSR,'linear-gradient(90deg,#805ad5,#b794f4)',spxQ+' ('+(totalQty>0?(spxQ/totalQty*100).toFixed(2):0)+'%)');
-  if(othQ>0)srH+=createBar('Other',othQ,maxSR,'linear-gradient(90deg,#718096,#a0aec0)',othQ+' ('+(totalQty>0?(othQ/totalQty*100).toFixed(2):0)+'%)');
+  srH+=createBar('STOW',stowQ,maxSR,'linear-gradient(90deg,#38a169,#68d391)',stowQ+' ('+(totalQty>0?(stowQ/totalQty*100).toFixed(1):0)+'%)');
+  srH+=createBar('RECEIVE',rcvQ,maxSR,'linear-gradient(90deg,#3182ce,#63b3ed)',rcvQ+' ('+(totalQty>0?(rcvQ/totalQty*100).toFixed(1):0)+'%)');
+  srH+=createBar('SPX5',spxQ,maxSR,'linear-gradient(90deg,#805ad5,#b794f4)',spxQ+' ('+(totalQty>0?(spxQ/totalQty*100).toFixed(1):0)+'%)');
+  if(othQ>0)srH+=createBar('Other',othQ,maxSR,'linear-gradient(90deg,#718096,#a0aec0)',othQ+' ('+(totalQty>0?(othQ/totalQty*100).toFixed(1):0)+'%)');
   srH+='</div>';
   document.getElementById('cR').innerHTML=srH;
   var users={};
@@ -743,8 +842,8 @@ function renderExplorer(){
   var shortC=MD.filter(function(r){return r.symptoms==='Shortage';}).length;
   var k='';
   k+=kpiCard('Total Records',MD.length,'','blue');
-  k+=kpiCard('Overage',overC,(MD.length>0?(overC/MD.length*100).toFixed(2):0)+'%','teal');
-  k+=kpiCard('Shortage',shortC,(MD.length>0?(shortC/MD.length*100).toFixed(2):0)+'%','red');
+  k+=kpiCard('Overage',overC,(MD.length>0?(overC/MD.length*100).toFixed(1):0)+'%','teal');
+  k+=kpiCard('Shortage',shortC,(MD.length>0?(shortC/MD.length*100).toFixed(1):0)+'%','red');
   document.getElementById('eK').innerHTML=k;
   renderExplorerTable(MD);
 }
@@ -755,7 +854,8 @@ function renderExplorerTable(data){
   data.forEach(function(r,i){
     var sym=r.symptoms==='Shortage'?'shortage':'overage';
     var st=r.review_status==='Closed'?'closed':r.review_status==='In Review'?'in-review':'not-returned';
-    h+='<tr><td>'+(i+1)+'</td><td>'+(r.user_id||'')+'</td><td>'+(r.container||'')+'</td><td>'+(r.asin||'')+'</td><td>'+(r.item_name||'').substring(0,30)+'</td><td><span class="badge '+sym+'">'+(r.symptoms||'')+'</span></td><td>'+r.qty+'</td><td>'+((r.gl_product_group_name||'').replace('gl_','').replace(/_/g,' '))+'</td><td>'+(r.source_warehouse_id||'')+'</td><td><span class="badge '+st+'">'+r.review_status+'</span></td><td>'+(r.cause||'-')+'</td><td>'+(r.responsible||'-')+'</td></tr>';
+    var causeLabel=getCauseLabel(r.cause)||'-';
+    h+='<tr><td>'+(i+1)+'</td><td>'+(r.user_id||'')+'</td><td>'+(r.container||'')+'</td><td>'+(r.asin||'')+'</td><td>'+(r.item_name||'').substring(0,25)+'</td><td><span class="badge '+sym+'">'+(r.symptoms||'')+'</span></td><td>'+r.qty+'</td><td>'+((r.gl_product_group_name||'').replace('gl_','').replace(/_/g,' '))+'</td><td>'+(r.source_warehouse_id||'')+'</td><td><span class="badge '+st+'">'+r.review_status+'</span></td><td>'+causeLabel+'</td><td>'+(r.responsible||'-')+'</td></tr>';
   });
   tb.innerHTML=h;
   document.getElementById('eC').textContent=data.length+' rows';
@@ -776,38 +876,33 @@ function filterExplorer(){
 function renderOffenders(){
   if(!MD)return;
   var totalQty=MD.reduce(function(s,r){return s+r.qty;},0);
-  var stowU={};
-  var rcvU={};
-  var asinM={};
+  var stowU={},rcvU={},asinM={};
   MD.forEach(function(r){
-    if(r.cause==='STOW'){
+    if(getBaseCause(r.cause)==='STOW'){
       var uid=r.responsible||r.user_id||'Unknown';
       if(!stowU[uid])stowU[uid]={d:0,q:0};
-      stowU[uid].d++;
-      stowU[uid].q+=r.qty;
+      stowU[uid].d++;stowU[uid].q+=r.qty;
     }
-    if(r.cause==='RECEIVE'){
+    if(getBaseCause(r.cause)==='RECEIVE'){
       var uid2=r.responsible||'Unknown';
       if(!rcvU[uid2])rcvU[uid2]={d:0,q:0};
-      rcvU[uid2].d++;
-      rcvU[uid2].q+=r.qty;
+      rcvU[uid2].d++;rcvU[uid2].q+=r.qty;
     }
     var a=r.asin||'Unknown';
     if(!asinM[a])asinM[a]={d:0,q:0};
-    asinM[a].d++;
-    asinM[a].q+=r.qty;
+    asinM[a].d++;asinM[a].q+=r.qty;
   });
   var stKeys=Object.keys(stowU).sort(function(a,b){return stowU[b].q-stowU[a].q;});
   var sH='';
   stKeys.forEach(function(k,i){
-    sH+='<tr><td>'+(i+1)+'</td><td>'+k+'</td><td>'+stowU[k].d+'</td><td>'+stowU[k].q+'</td><td>'+(totalQty>0?(stowU[k].q/totalQty*100).toFixed(2):0)+'%</td></tr>';
+    sH+='<tr><td>'+(i+1)+'</td><td>'+k+'</td><td>'+stowU[k].d+'</td><td>'+stowU[k].q+'</td><td>'+(totalQty>0?(stowU[k].q/totalQty*100).toFixed(1):0)+'%</td></tr>';
   });
   if(!sH)sH='<tr><td colspan="5" style="text-align:center;color:#718096;">No STOW offenders</td></tr>';
   document.getElementById('oST').querySelector('tbody').innerHTML=sH;
   var rcKeys=Object.keys(rcvU).sort(function(a,b){return rcvU[b].q-rcvU[a].q;});
   var rH='';
   rcKeys.forEach(function(k,i){
-    rH+='<tr><td>'+(i+1)+'</td><td>'+k+'</td><td>'+rcvU[k].d+'</td><td>'+rcvU[k].q+'</td><td>'+(totalQty>0?(rcvU[k].q/totalQty*100).toFixed(2):0)+'%</td></tr>';
+    rH+='<tr><td>'+(i+1)+'</td><td>'+k+'</td><td>'+rcvU[k].d+'</td><td>'+rcvU[k].q+'</td><td>'+(totalQty>0?(rcvU[k].q/totalQty*100).toFixed(1):0)+'%</td></tr>';
   });
   if(!rH)rH='<tr><td colspan="5" style="text-align:center;color:#718096;">No RECEIVE offenders</td></tr>';
   document.getElementById('oRT').querySelector('tbody').innerHTML=rH;
@@ -817,11 +912,11 @@ function renderOffenders(){
     aH+='<tr><td>'+(i+1)+'</td><td>'+k+'</td><td>'+asinM[k].d+'</td><td>'+asinM[k].q+'</td></tr>';
   });
   document.getElementById('oAT').querySelector('tbody').innerHTML=aH;
-  var spxItems=MD.filter(function(r){return r.cause==='SPX5';});
+  var spxItems=MD.filter(function(r){return getBaseCause(r.cause)==='SPX5';});
   var spxQty=spxItems.reduce(function(s,r){return s+r.qty;},0);
   var spK='';
   spK+=kpiCard('SPX5 Defects',spxItems.length,'Qty: '+spxQty,'purple');
-  spK+=kpiCard('% of Total',(totalQty>0?(spxQty/totalQty*100).toFixed(2):0)+'%','','teal');
+  spK+=kpiCard('% of Total',(totalQty>0?(spxQty/totalQty*100).toFixed(1):0)+'%','','teal');
   document.getElementById('spS').innerHTML=spK;
 }
 
@@ -855,7 +950,7 @@ function renderShiftAction(){
   var notRet=MD.filter(function(r){return r.review_status==='Not Returned';});
   var nQty=notRet.reduce(function(s,r){return s+r.qty;},0);
   var k='';
-  k+=kpiCard('Not Returned',notRet.length,(MD.length>0?(notRet.length/MD.length*100).toFixed(2):0)+'% of total','red');
+  k+=kpiCard('Not Returned',notRet.length,(MD.length>0?(notRet.length/MD.length*100).toFixed(1):0)+'% of total','red');
   k+=kpiCard('Qty Not Returned',nQty,'','orange');
   k+=kpiCard('Total Records',MD.length,'','blue');
   document.getElementById('sK').innerHTML=k;
@@ -906,3 +1001,4 @@ function compareShifts(){
 </body>
 </html>
 
+      
